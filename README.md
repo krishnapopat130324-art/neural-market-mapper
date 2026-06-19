@@ -4,9 +4,11 @@
 Enter any company URL → Get instant SWOT analysis, competitor mapping, and market intelligence reports
 
 📖 OVERVIEW
+
 Neural Market Mapper is a cutting-edge AI platform that transforms company websites into comprehensive competitive intelligence reports. Built for business analysts, entrepreneurs, and researchers who need fast, accurate market insights without expensive tools.
 
 ✨ KEY FEATURES
+
 🔍 ONE-CLICK ANALYSIS
 Paste any company URL and get instant insights
 
@@ -32,13 +34,18 @@ Results in 2-3 seconds
 No API keys, no subscriptions
 
 🚀 QUICK START
+
 PREREQUISITES
 📦 Node.js v18 or higher
+
 🐍 Python v3.8 or higher
+
 📦 npm (comes with Node.js)
+
 🔗 Git (for cloning)
 
 INSTALLATION
+
 bash
 # Clone repository
 git clone https://github.com/krishnapopat130324-art/neural-market-mapper.git
@@ -63,21 +70,19 @@ Open Browser
 
 text
 http://localhost:3000
+
 🎯 HOW IT WORKS
-Step 1
-Enter Company URL
-
-Step 2
-AI Scrapes and Analyzes Website Content
-
-Step 3
-Generates SWOT, Competitors and Market Gaps
-
-Step 4
-Beautiful Dashboard Display
-
-Step 5
-Download Professional Report
+┌─────────────────────────────────────────────────────────┐
+│  1. Enter Company URL                                   │
+│     ↓                                                   │
+│  2. AI Scrapes & Analyzes Website Content              │
+│     ↓                                                   │
+│  3. Generates SWOT, Competitors & Market Gaps          │
+│     ↓                                                   │
+│  4. Beautiful Dashboard Display                         │
+│     ↓                                                   │
+│  5. Download Professional Report                        │
+└─────────────────────────────────────────────────────────┘
 
 EXAMPLE
 Input: https://google.com
@@ -129,7 +134,6 @@ BeautifulSoup for web extraction
 Docker for containerization
 
 📁 PROJECT ARCHITECTURE
-
 neural-market-mapper/
 │
 ├── backend_simple.py          Core API, AI and Scraping
@@ -150,11 +154,15 @@ neural-market-mapper/
 │
 └── README.md                  Documentation
 
-VISUAL FEATURES
+🎨 VISUAL FEATURES
 ✨ Glass-morphism Cards
+
 🎨 Gradient Backgrounds
+
 🔄 Smooth Animations
+
 📱 Fully Responsive
+
 🖊️ Professional Typography
 
 💡 WHY THIS PROJECT
@@ -174,33 +182,37 @@ Docker-ready architecture
 Demonstrates real-world problem solving
 
 🏆 PROJECT HIGHLIGHTS
-✅ 6 Files Only
-Minimal yet powerful
+✅ 6 Files Only - Minimal yet powerful
 
-✅ 100 Percent Free
-No paid dependencies
+✅ 100% Free - No paid dependencies
 
-✅ Production Ready
-Docker plus async
+✅ Production Ready - Docker plus async
 
-✅ Real AI
-Custom NLP analysis
+✅ Real AI - Custom NLP analysis
 
-✅ Beautiful UI
-Premium design system
+✅ Beautiful UI - Premium design system
 
-✅ Instant Results
-2 to 3 second response
+✅ Instant Results - 2 to 3 second response
 
 🙏 ACKNOWLEDGMENTS
-Built with ❤️ using Next.js for the frontend
+Built with ❤️ using:
+
+Next.js for the frontend
+
 FastAPI for the backend
+
 Tailwind CSS for styling
+
 Inspired by modern competitive intelligence tools
+
 Special thanks to the open-source community
 
 📧 AUTHOR
-👤 Krishna Popat
+Krishna Popat
+
+GitHub: krishnapopat130324-art
+
+Project Link: https://github.com/krishnapopat130324-art/neural-market-mapper
 
 🚀 MADE WITH LOVE
 Made with 🚀 by Krishna Popat
