@@ -5,6 +5,7 @@ AI-Powered Competitive Intelligence Platform
 Transform any company website into a comprehensive competitive intelligence report within seconds.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 OVERVIEW
 
 Neural Market Mapper is an AI-powered market intelligence platform that analyzes company websites and automatically generates strategic business insights.
@@ -20,6 +21,7 @@ Simply enter a company URL and receive:
 Built for entrepreneurs, business analysts, startup founders, researchers, and students who need professional market insights without expensive enterprise tools.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 FEATURES
 
 🔍 One-Click Company Analysis
@@ -62,6 +64,7 @@ No subscriptions.
 No hidden charges.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 HOW IT WORKS
 
 1️⃣ Enter Company Website URL
@@ -76,6 +79,7 @@ HOW IT WORKS
 ↓
 6️⃣ Download a Professional PDF Market Intelligence Report
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 EXAMPLE
 
 Input
@@ -123,6 +127,7 @@ Market Gaps
 • Ethical AI services
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 TECHNOLOGY STACK
 
 Frontend
@@ -158,6 +163,7 @@ Deployment
 • Docker Compose
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 PROJECT STRUCTURE
 
 neural-market-mapper/
@@ -180,6 +186,7 @@ neural-market-mapper/
 └── page.js
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 INSTALLATION
 
 Prerequisites
@@ -210,6 +217,7 @@ cd frontend
 npm install
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 RUNNING THE APPLICATION
 
 Terminal 1 — Backend
@@ -231,6 +239,7 @@ Frontend URL
 http://localhost:3000
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 DOCKER DEPLOYMENT
 
 Build Containers
@@ -246,6 +255,7 @@ Run In Background
 docker-compose up -d
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 VISUAL HIGHLIGHTS
 
 ✨ Glassmorphism Design
@@ -261,6 +271,7 @@ VISUAL HIGHLIGHTS
 🌙 Modern User Experience
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 BUSINESS VALUE
 
 💎 Saves Market Research Costs
@@ -280,6 +291,7 @@ Access data-driven intelligence for smarter business strategies.
 Discover market gaps and opportunities before competitors.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 WHY THIS PROJECT STANDS OUT
 
 ✅ Solves a Real Business Problem
@@ -300,6 +312,7 @@ WHY THIS PROJECT STANDS OUT
 
 ✅ Production-Oriented Development
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 AUTHOR
 
 Krishna Popat
