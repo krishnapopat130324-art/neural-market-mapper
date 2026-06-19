@@ -9,25 +9,39 @@ export default function AnalysisPage() {
   const [result, setResult] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
+  const [retryCount, setRetryCount] = useState(0)
 
   useEffect(() => {
     const fetchResult = async () => {
       try {
         const res = await fetch(`http://localhost:8000/api/status/${id}`)
         const data = await res.json()
+        
         if (data.status === 'completed') {
           setResult(data)
           setLoading(false)
+        } else if (data.status === 'processing') {
+          setTimeout(() => {
+            setRetryCount(prev => prev + 1)
+          }, 2000)
         } else {
-          setTimeout(fetchResult, 2000)
+          setError(true)
+          setLoading(false)
         }
       } catch (error) {
-        setError(true)
-        setLoading(false)
+        if (retryCount < 5) {
+          setTimeout(() => {
+            setRetryCount(prev => prev + 1)
+          }, 2000)
+        } else {
+          setError(true)
+          setLoading(false)
+        }
       }
     }
+    
     fetchResult()
-  }, [id])
+  }, [id, retryCount])
 
   if (loading) {
     return (
@@ -56,6 +70,7 @@ export default function AnalysisPage() {
           `}</style>
           <h2 style={{ color: '#3D2B1F', fontSize: '24px', fontWeight: 700 }}>Analyzing Company</h2>
           <p style={{ color: '#8B7355', marginTop: '8px' }}>Gathering market intelligence...</p>
+          <p style={{ color: '#8B7355', fontSize: '13px', marginTop: '4px' }}>Attempt {retryCount + 1}</p>
         </div>
       </div>
     )
@@ -197,29 +212,57 @@ export default function AnalysisPage() {
               </div>
               <p style={{ color: '#8B7355', fontSize: '16px', maxWidth: '600px', marginTop: '8px' }}>{a.summary}</p>
             </div>
-            <button
-              onClick={async () => {
-                const res = await fetch(`http://localhost:8000/api/report/${id}`)
-                const data = await res.json()
-                alert(data.report)
-              }}
-              style={{
-                padding: '12px 28px',
-                borderRadius: '10px',
-                border: 'none',
-                background: 'linear-gradient(135deg, #8B6F4C, #A8876A)',
-                color: 'white',
-                fontWeight: 600,
-                fontSize: '14px',
-                cursor: 'pointer',
-                transition: 'all 0.3s ease',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '8px'
-              }}
-            >
-              📄 Download Report
-            </button>
+            
+            <div style={{ display: 'flex', gap: '12px' }}>
+              <button
+                onClick={async () => {
+                  const res = await fetch(`http://localhost:8000/api/report/${id}`)
+                  const data = await res.json()
+                  alert(data.report)
+                }}
+                style={{
+                  padding: '12px 24px',
+                  borderRadius: '10px',
+                  border: 'none',
+                  background: '#8B7355',
+                  color: 'white',
+                  fontWeight: 600,
+                  fontSize: '14px',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px'
+                }}
+              >
+                📝 Text Report
+              </button>
+              
+              <button
+                onClick={() => {
+                  window.open(`http://localhost:8000/api/download-pdf/${id}`, '_blank')
+                }}
+                style={{
+                  padding: '12px 28px',
+                  borderRadius: '10px',
+                  border: 'none',
+                  background: 'linear-gradient(135deg, #8B6F4C, #A8876A)',
+                  color: 'white',
+                  fontWeight: 600,
+                  fontSize: '14px',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  boxShadow: '0 4px 15px rgba(139, 111, 76, 0.2)'
+                }}
+                onMouseEnter={e => { e.target.style.boxShadow = '0 8px 30px rgba(139, 111, 76, 0.3)'; e.target.style.transform = 'scale(1.02)' }}
+                onMouseLeave={e => { e.target.style.boxShadow = '0 4px 15px rgba(139, 111, 76, 0.2)'; e.target.style.transform = 'scale(1)' }}
+              >
+                📄 Download PDF
+              </button>
+            </div>
           </div>
         </div>
 
@@ -231,10 +274,10 @@ export default function AnalysisPage() {
           marginBottom: '24px'
         }}>
           {[
-            { title: 'Strengths', icon: '✅', color: '#059669', bg: 'rgba(5, 150, 105, 0.04)', data: a.swot?.strengths },
-            { title: 'Weaknesses', icon: '❌', color: '#DC2626', bg: 'rgba(220, 38, 38, 0.04)', data: a.swot?.weaknesses },
-            { title: 'Opportunities', icon: '🚀', color: '#2563EB', bg: 'rgba(37, 99, 235, 0.04)', data: a.swot?.opportunities },
-            { title: 'Threats', icon: '⚠️', color: '#D97706', bg: 'rgba(217, 119, 6, 0.04)', data: a.swot?.threats }
+            { title: 'Strengths', icon: '✅', color: '#059669', data: a.swot?.strengths },
+            { title: 'Weaknesses', icon: '❌', color: '#DC2626', data: a.swot?.weaknesses },
+            { title: 'Opportunities', icon: '🚀', color: '#2563EB', data: a.swot?.opportunities },
+            { title: 'Threats', icon: '⚠️', color: '#D97706', data: a.swot?.threats }
           ].map((item, index) => (
             <div key={index} style={{
               padding: '24px',
@@ -354,11 +397,10 @@ export default function AnalysisPage() {
             <span>|</span>
             <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>⚡ AI Generated</span>
           </div>
+          
           <button
-            onClick={async () => {
-              const res = await fetch(`http://localhost:8000/api/report/${id}`)
-              const data = await res.json()
-              alert(data.report)
+            onClick={() => {
+              window.open(`http://localhost:8000/api/download-pdf/${id}`, '_blank')
             }}
             style={{
               padding: '10px 24px',
@@ -369,10 +411,13 @@ export default function AnalysisPage() {
               fontWeight: 600,
               fontSize: '14px',
               cursor: 'pointer',
-              transition: 'all 0.3s ease'
+              transition: 'all 0.3s ease',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px'
             }}
           >
-            📄 Export Full Report
+            📄 Export PDF Report
           </button>
         </div>
       </div>

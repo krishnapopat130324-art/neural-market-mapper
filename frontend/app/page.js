@@ -6,25 +6,45 @@ import { useRouter } from 'next/navigation'
 export default function Home() {
   const [url, setUrl] = useState('')
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
   const router = useRouter()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    if (!url) return
+    if (!url) {
+      setError('Please enter a URL')
+      return
+    }
+    
     setLoading(true)
+    setError('')
+    
     try {
       const res = await fetch('http://localhost:8000/api/analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ url })
       })
+      
       const data = await res.json()
+      console.log('Response:', data)
+      
+      if (data.status === 'failed') {
+        setError(data.error || 'Analysis failed. Please try again.')
+        setLoading(false)
+        return
+      }
+      
       if (data.task_id) {
         router.push(`/analysis/${data.task_id}`)
+      } else {
+        setError('No task ID received. Please try again.')
+        setLoading(false)
       }
+      
     } catch (error) {
-      alert('Error analyzing company')
-    } finally {
+      console.error('Error:', error)
+      setError('Failed to connect to server. Make sure backend is running.')
       setLoading(false)
     }
   }
@@ -80,6 +100,10 @@ export default function Home() {
           0%, 100% { opacity: 0.6; }
           50% { opacity: 1; }
         }
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
         .gradient-text-brown {
           background: linear-gradient(135deg, #8B6F4C 0%, #A8876A 30%, #C4A88A 60%, #8B6F4C 100%);
           -webkit-background-clip: text;
@@ -116,26 +140,6 @@ export default function Home() {
         }
         .btn-brown:active {
           transform: scale(0.98);
-        }
-        .badge-brown {
-          background: linear-gradient(135deg, rgba(139, 111, 76, 0.08), rgba(168, 135, 106, 0.12));
-          border: 1px solid rgba(139, 111, 76, 0.15);
-        }
-        .feature-icon-brown {
-          background: linear-gradient(135deg, rgba(139, 111, 76, 0.08), rgba(168, 135, 106, 0.12));
-          border: 1px solid rgba(139, 111, 76, 0.08);
-        }
-        .text-brown {
-          color: #5C4033;
-        }
-        .text-brown-light {
-          color: #8B7355;
-        }
-        .text-brown-lighter {
-          color: #A8907A;
-        }
-        .border-brown {
-          border-color: rgba(139, 111, 76, 0.1);
         }
       `}</style>
 
@@ -260,6 +264,19 @@ export default function Home() {
 
           {/* Search Form */}
           <form onSubmit={handleSubmit} style={{ position: 'relative' }}>
+            {error && (
+              <div style={{
+                padding: '10px 14px',
+                borderRadius: '8px',
+                background: 'rgba(220, 38, 38, 0.08)',
+                color: '#DC2626',
+                fontSize: '13px',
+                marginBottom: '12px',
+                border: '1px solid rgba(220, 38, 38, 0.15)'
+              }}>
+                {error}
+              </div>
+            )}
             <div style={{
               position: 'relative',
               background: 'rgba(255, 252, 248, 0.8)',
@@ -309,7 +326,7 @@ export default function Home() {
                   color: 'white',
                   cursor: loading ? 'not-allowed' : 'pointer',
                   opacity: loading ? 0.7 : 1,
-                  background: 'linear-gradient(135deg, #8B6F4C, #A8876A)',
+                  background: loading ? '#8B7355' : 'linear-gradient(135deg, #8B6F4C, #A8876A)',
                   display: 'flex',
                   alignItems: 'center',
                   gap: '8px',
@@ -335,13 +352,6 @@ export default function Home() {
               </button>
             </div>
           </form>
-
-          <style>{`
-            @keyframes spin {
-              0% { transform: rotate(0deg); }
-              100% { transform: rotate(360deg); }
-            }
-          `}</style>
 
           {/* Trust Badges */}
           <div style={{
