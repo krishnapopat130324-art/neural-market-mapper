@@ -67,26 +67,19 @@ No hidden charges.
 
 HOW IT WORKS
 
-┌─────────────────────────────────────────┐
-│ 1. Enter Company Website URL            │
-└─────────────────────────────────────────┘
-↓
-┌─────────────────────────────────────────┐
-│ 2. Scrape Website Content               │
-└─────────────────────────────────────────┘
-↓
-┌─────────────────────────────────────────┐
-│ 3. Analyze Business Information         │
-└─────────────────────────────────────────┘
-↓
-┌─────────────────────────────────────────┐
-│ 4. Generate SWOT & Competitor Mapping   │
-└─────────────────────────────────────────┘
-↓
-┌─────────────────────────────────────────┐
-│ 5. Display Intelligence Dashboard       │
-└─────────────────────────────────────────┘
+HOW IT WORKS
 
+1️⃣ Enter Company Website URL
+↓
+2️⃣ Scrape Website Content
+↓
+3️⃣ Analyze Business Information
+↓
+4️⃣ Generate SWOT Analysis, Competitor Mapping & Market Gap Insights
+↓
+5️⃣ Display Results in a Beautiful Intelligence Dashboard
+↓
+6️⃣ Download Professional Market Intelligence Report
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 EXAMPLE
