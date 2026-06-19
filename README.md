@@ -1,219 +1,355 @@
 🧠 NEURAL MARKET MAPPER
 
-🤖 AI-Powered Competitive Intelligence Platform
-Enter any company URL → Get instant SWOT analysis, competitor mapping, and market intelligence reports
+AI-Powered Competitive Intelligence Platform
 
-📖 OVERVIEW
+Transform any company website into a comprehensive competitive intelligence report within seconds.
 
-Neural Market Mapper is a cutting-edge AI platform that transforms company websites into comprehensive competitive intelligence reports. Built for business analysts, entrepreneurs, and researchers who need fast, accurate market insights without expensive tools.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-✨ KEY FEATURES
+OVERVIEW
 
-🔍 ONE-CLICK ANALYSIS
-Paste any company URL and get instant insights
+Neural Market Mapper is an AI-powered market intelligence platform that analyzes company websites and automatically generates strategic business insights.
 
-📊 SWOT ANALYSIS
-Automated strengths, weaknesses, opportunities, threats
+Simply enter a company URL and receive:
 
-🏢 COMPETITOR DISCOVERY
-Identifies top competitors in seconds
+• SWOT Analysis
+• Competitor Discovery
+• Market Gap Detection
+• Strategic Intelligence Reports
+• Downloadable Business Reports
 
-💡 MARKET GAP DETECTION
-Uncovers untapped opportunities
+Built for entrepreneurs, business analysts, startup founders, researchers, and students who need professional market insights without expensive enterprise tools.
 
-📄 PROFESSIONAL REPORTS
-Downloadable analysis in text format
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-🎨 PREMIUM UI
-Glass-morphism design with light brown theme
+FEATURES
 
-⚡ LIGHTNING FAST
-Results in 2-3 seconds
+🔍 One-Click Company Analysis
 
-🆓 COMPLETELY FREE
-No API keys, no subscriptions
+Analyze any company website instantly using AI-powered content extraction and intelligence generation.
 
-🚀 QUICK START
+📊 Automated SWOT Analysis
 
-PREREQUISITES
-📦 Node.js v18 or higher
+Generate detailed insights into:
 
-🐍 Python v3.8 or higher
+• Strengths
+• Weaknesses
+• Opportunities
+• Threats
 
-📦 npm (comes with Node.js)
+🏢 Competitor Discovery
 
-🔗 Git (for cloning)
+Automatically identify major competitors and alternative solutions in the same market.
 
-INSTALLATION
+💡 Market Gap Detection
 
-bash
-# Clone repository
-git clone https://github.com/krishnapopat130324-art/neural-market-mapper.git
-cd neural-market-mapper
+Discover underserved customer needs and untapped business opportunities.
 
-# Generate frontend
-python frontend.py
+📄 Professional Reports
 
-# Install dependencies
-pip install -r requirements.txt
-cd frontend && npm install
-RUNNING
-Terminal 1 - Backend
+Generate structured intelligence reports that can be downloaded and shared.
 
-bash
-python backend_simple.py
-Terminal 2 - Frontend
+🎨 Premium User Interface
 
-bash
-cd frontend && npm run dev
-Open Browser
+Modern glassmorphism-inspired design with elegant light brown aesthetics.
 
-text
-http://localhost:3000
+⚡ Lightning Fast
 
-🎯 HOW IT WORKS
-┌─────────────────────────────────────────────────────────┐
-│  1. Enter Company URL                                   │
-│     ↓                                                   │
-│  2. AI Scrapes & Analyzes Website Content              │
-│     ↓                                                   │
-│  3. Generates SWOT, Competitors & Market Gaps          │
-│     ↓                                                   │
-│  4. Beautiful Dashboard Display                         │
-│     ↓                                                   │
-│  5. Download Professional Report                        │
-└─────────────────────────────────────────────────────────┘
+Receive complete reports in approximately 2–3 seconds.
+
+🆓 Completely Free
+
+No API keys.
+No subscriptions.
+No hidden charges.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+HOW IT WORKS
+
+┌─────────────────────────────────────────┐
+│ 1. Enter Company Website URL            │
+└─────────────────────────────────────────┘
+↓
+┌─────────────────────────────────────────┐
+│ 2. Scrape Website Content               │
+└─────────────────────────────────────────┘
+↓
+┌─────────────────────────────────────────┐
+│ 3. Analyze Business Information         │
+└─────────────────────────────────────────┘
+↓
+┌─────────────────────────────────────────┐
+│ 4. Generate SWOT & Competitor Mapping   │
+└─────────────────────────────────────────┘
+↓
+┌─────────────────────────────────────────┐
+│ 5. Display Intelligence Dashboard       │
+└─────────────────────────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 EXAMPLE
-Input: https://google.com
 
-Output:
+Input
 
-text
+https://google.com
+
+Output
+
 Company: Google
+
 Sentiment: Positive
 
 SWOT ANALYSIS
 
-✅ Strengths:
-   • Strong in search technology
-   • Dominant AI capabilities
-   • Extensive cloud infrastructure
+Strengths
 
-❌ Weaknesses:
-   • Limited data transparency
-   • Regulatory challenges
+• Strong search technology
+• Advanced AI capabilities
+• Extensive cloud infrastructure
 
-🚀 Opportunities:
-   • AI market expansion
-   • Cloud service growth
+Weaknesses
 
-⚠️ Threats:
-   • Competition from Microsoft
-   • Regulatory pressure
+• Regulatory challenges
+• Privacy concerns
 
-🏢 Competitors: Microsoft, Amazon, Apple
-💡 Market Gaps: Privacy-focused search, Ethical AI
-🛠️ TECHNOLOGY STACK
-🖥️ FRONTEND
-Next.js 14 with React for UI and routing
+Opportunities
 
-🎨 STYLING
-Tailwind CSS for professional design
+• AI market expansion
+• Growth in enterprise cloud services
 
-⚙️ BACKEND
-FastAPI with Python for API server
+Threats
 
-🧠 AI ENGINE
-Custom NLP for content analysis
+• Competition from Microsoft
+• Government regulations
 
-🕸️ SCRAPING
-BeautifulSoup for web extraction
+Competitors
 
-🐳 DEPLOYMENT
-Docker for containerization
+Microsoft
+Amazon
+Apple
 
-📁 PROJECT ARCHITECTURE
+Market Gaps
+
+Privacy-focused search solutions
+Ethical AI services
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TECHNOLOGY STACK
+
+Frontend
+
+• Next.js 14
+• React
+• Tailwind CSS
+
+Backend
+
+• FastAPI
+• Python
+
+AI Engine
+
+• Custom NLP Analysis
+• Sentiment Analysis
+• Competitive Intelligence Algorithms
+
+Web Scraping
+
+• BeautifulSoup
+• Requests
+
+Deployment
+
+• Docker
+• Docker Compose
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PROJECT STRUCTURE
+
 neural-market-mapper/
-│
-├── backend_simple.py          Core API, AI and Scraping
-├── frontend.py                Frontend Generator
-├── requirements.txt           Python Dependencies
-├── package.json               Node Dependencies
-├── docker-compose.yml         Docker Orchestration
-├── Dockerfile.backend         Backend Container Config
-│
-├── frontend/                  Next.js Application
-│   └── app/
-│       ├── globals.css        Global Styles
-│       ├── layout.js          Root Layout
-│       ├── page.js            Homepage
-│       └── analysis/
-│           └── [id]/
-│               └── page.js    Results Page
-│
-└── README.md                  Documentation
 
-🎨 VISUAL FEATURES
-✨ Glass-morphism Cards
+├── backend_simple.py
+├── frontend.py
+├── requirements.txt
+├── package.json
+├── docker-compose.yml
+├── Dockerfile.backend
+├── README.md
 
-🎨 Gradient Backgrounds
+└── frontend/
+└── app/
+├── globals.css
+├── layout.js
+├── page.js
+└── analysis/
+└── [id]/
+└── page.js
 
-🔄 Smooth Animations
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-📱 Fully Responsive
+INSTALLATION
 
-🖊️ Professional Typography
+Prerequisites
 
-💡 WHY THIS PROJECT
-💎 BUSINESS VALUE
-Saves thousands in market research costs
+• Node.js 18 or higher
+• Python 3.8 or higher
+• npm
+• Git
 
-🔧 TECHNICAL DEPTH
-Full-stack with AI and async processing
+Clone Repository
 
-🎨 PROFESSIONAL DESIGN
-Enterprise-grade UI and UX
+git clone https://github.com/krishnapopat130324-art/neural-market-mapper.git
 
-📈 SCALABILITY
-Docker-ready architecture
+cd neural-market-mapper
 
-🎯 INTERVIEW IMPACT
-Demonstrates real-world problem solving
+Generate Frontend
 
-🏆 PROJECT HIGHLIGHTS
-✅ 6 Files Only - Minimal yet powerful
+python frontend.py
 
-✅ 100% Free - No paid dependencies
+Install Backend Dependencies
 
-✅ Production Ready - Docker plus async
+pip install -r requirements.txt
 
-✅ Real AI - Custom NLP analysis
+Install Frontend Dependencies
 
-✅ Beautiful UI - Premium design system
+cd frontend
 
-✅ Instant Results - 2 to 3 second response
+npm install
 
-🙏 ACKNOWLEDGMENTS
-Built with ❤️ using:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Next.js for the frontend
+RUNNING THE APPLICATION
 
-FastAPI for the backend
+Terminal 1 — Backend
 
-Tailwind CSS for styling
+python backend_simple.py
 
-Inspired by modern competitive intelligence tools
+Backend URL
 
-Special thanks to the open-source community
+http://localhost:8000
 
-📧 AUTHOR
+Terminal 2 — Frontend
+
+cd frontend
+
+npm run dev
+
+Frontend URL
+
+http://localhost:3000
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DOCKER DEPLOYMENT
+
+Build Containers
+
+docker-compose build
+
+Start Containers
+
+docker-compose up
+
+Run In Background
+
+docker-compose up -d
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+VISUAL HIGHLIGHTS
+
+✨ Glassmorphism Design
+
+🎨 Premium Gradients
+
+⚡ Smooth Animations
+
+📱 Fully Responsive Layout
+
+💼 Enterprise-Style Dashboard
+
+🌙 Modern User Experience
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+BUSINESS VALUE
+
+💎 Saves Market Research Costs
+
+Generate valuable competitive intelligence without expensive subscriptions.
+
+⚡ Saves Time
+
+Obtain strategic insights within seconds instead of spending hours on manual research.
+
+📈 Improves Decision Making
+
+Access data-driven intelligence for smarter business strategies.
+
+🚀 Accelerates Innovation
+
+Discover market gaps and opportunities before competitors.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+WHY THIS PROJECT STANDS OUT
+
+✅ Solves a Real Business Problem
+
+✅ Full-Stack Architecture
+
+✅ AI-Powered Analysis
+
+✅ Modern Enterprise Design
+
+✅ Docker-Ready Deployment
+
+✅ Fast and Lightweight
+
+✅ Portfolio and Interview Ready
+
+✅ Production-Oriented Development
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FUTURE ENHANCEMENTS
+
+• PDF Report Generation
+
+• Multi-Language Support
+
+• Industry Trend Analysis
+
+• Competitor Comparison Dashboards
+
+• AI-Powered Recommendations
+
+• Historical Market Tracking
+
+• Team Collaboration Features
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+AUTHOR
+
 Krishna Popat
 
-GitHub: krishnapopat130324-art
+GitHub
 
-Project Link: https://github.com/krishnapopat130324-art/neural-market-mapper
+https://github.com/krishnapopat130324-art
 
-🚀 MADE WITH LOVE
-Made with 🚀 by Krishna Popat
+Project Repository
 
+https://github.com/krishnapopat130324-art/neural-market-mapper
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+MADE WITH LOVE
+
+Built with ❤️ by Krishna Popat
+
+Turning websites into actionable business intelligence through the power of AI.
